@@ -143,3 +143,121 @@ Text Domain:  lch-theme
     text-decoration: none;
     font-weight: 600;
 }
+
+/* =====================
+   Search & Filter Form
+   ===================== */
+.lch-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.lch-filter__group {
+    flex: 1 1 200px;  /* grows and shrinks equally, min 200px */
+}
+
+.lch-filter__input {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #fff;
+    color: #1a1a1a;
+    box-sizing: border-box;
+}
+
+.lch-filter__select {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #fff;
+    color: #1a1a1a;
+    box-sizing: border-box;
+    appearance: auto;
+}
+
+.lch-filter__input:focus,
+.lch-filter__select:focus {
+    outline: none;
+    border-color: #0073aa;
+    box-shadow: 0 0 0 2px rgba(0, 115, 170, 0.15);
+}
+
+.lch-filter__submit {
+    flex-shrink: 0;         /* prevents button from shrinking */
+    padding: 0.6rem 1.5rem;
+    background: #0073aa;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    height: 38px;
+    align-self: flex-end;   /* lines up with bottom of inputs */
+}
+
+.lch-filter__submit:hover {
+    background: #005f8d;
+}
+
+.lch-filter__reset {
+    flex-shrink: 0;
+    color: #888;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+/* =====================
+   Results Count
+   ===================== */
+.lch-results-count {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* =====================
+   No Results
+   ===================== */
+.lch-no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: #555;
+}
+
+.lch-no-results a {
+    color: #0073aa;
+    text-decoration: underline;
+}
+
+/* =====================
+   Responsive
+   ===================== */
+@media ( max-width: 600px ) {
+    .lch-filter {
+        flex-direction: column;
+    }
+
+    .lch-filter__group {
+        width: 100%;
+    }
+
+    .lch-archive__grid {
+        grid-template-columns: 1fr;
+    }
+}
