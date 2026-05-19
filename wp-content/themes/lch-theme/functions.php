@@ -81,3 +81,8 @@ function lch_register_listing_taxonomies() {
     ));
 }
 add_action( 'init', 'lch_register_listing_taxonomies' );
+
+// Load ACF field group definitions
+if ( file_exists( get_stylesheet_directory() . '/inc/acf-fields.php' ) ) {
+    include_once get_stylesheet_directory() . '/inc/acf-fields.php';
+}
